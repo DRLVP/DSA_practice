@@ -48,6 +48,27 @@ int main()
     */
 
     // Third Pattern: Take an input n from the user, and create a pattern like below, for n=5, we have output like this.
+    /*
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        // print space
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int k = n; k > n - i; k--)
+        {
+            cout << k << " ";
+        }
+        cout << endl;
+    }
+    */
+
+    // Fourth Pattern: Take an input n from the user, and create a pattern like below, for n=5, we have output like this.
 
     int n;
     cout << "Enter the value of n: ";
@@ -56,13 +77,13 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         // print space
-        for (int j = 1; j <= n - 1; j++)
-        {
+        for (int j = 1; j <= n - i; j++)
             cout << "  ";
-        }
-        for (int k = n; k >= n - i; k--)
+
+        for (int k = n; k > n - i; k--)
         {
-            cout << k << " ";
+            char ch = ('A' + k - 1);
+            cout << ch << " ";
         }
         cout << endl;
     }
