@@ -1,6 +1,27 @@
 #include <iostream>
 using namespace std;
 
+int secondLargestElement(int arr[], int n)
+{
+    int largest = arr[0];
+    int secondLargest = INT32_MIN;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] > largest)
+        {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+        else if (arr[i] > secondLargest && arr[i] != largest)
+        {
+            secondLargest = arr[i];
+        }
+    }
+
+    return secondLargest;
+}
+
 int main()
 {
     // 1: Take 20 elements from user input and find its sum with the help of an array.
@@ -72,6 +93,8 @@ int main()
     */
 
     // 5: Find the second largest element in an array of unique elements of size n. Where n>3.
+    // int arr[1000] = {5, 7, 8, 11, 6, 3};
+    // cout << secondLargestElement(arr, 5);
 
-    return 0;
+    // 6: Find the third smallest element in an array of unique elements size n. Where n>3.
 }
